@@ -24,7 +24,7 @@ jobs:
   
       steps:
       - uses: actions/checkout@v4
-      - name: Trivy Fs Scan
+      - name: Trivy Installation
         run: |
           sudo apt-get install wget apt-transport-https gnupg lsb-release
           wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
@@ -33,7 +33,7 @@ jobs:
           sudo apt-get install trivy -y
 
       - name: Trivy Fs Scanning
-        run: trivy fs --format table -o fs-report.json
+        run: trivy fs --format table -o fs-report.json .
 
       - name: gitleaks Installation
         run: sudo apt install gitleaks -y
