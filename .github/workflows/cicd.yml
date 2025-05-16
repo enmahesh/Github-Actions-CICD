@@ -59,6 +59,7 @@ jobs:
 
   sonarQubeAnalysis:
     runs-on: self-hosted
+    needs: test
 
     steps:
     - uses: actions/checkout@v4
