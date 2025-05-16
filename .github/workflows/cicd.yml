@@ -44,7 +44,6 @@ jobs:
         
   test:
     runs-on: self-hosted
-    needs: build
     needs: Security-Checks
     
 
@@ -60,7 +59,7 @@ jobs:
     - name: Unit Test Cases
       run: mvn test
 
-   SonarQubeAnalysis:
+  SonarQubeAnalysis:
     runs-on: ubuntu-latest
 
     steps:
