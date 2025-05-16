@@ -129,10 +129,10 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
-        context: .
+        # context: .
         push: true
         tags: enmahesh/bankapp:latest
-        file: ./Dockerfile
-        platforms: linux/amd64,linux/arm64
+        # file: ./Dockerfile
+        # platforms: linux/amd64,linux/arm64
     
  
