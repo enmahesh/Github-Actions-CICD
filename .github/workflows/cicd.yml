@@ -100,7 +100,7 @@ jobs:
 
 
   build_docker_image_and_push:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: sonarQubeAnalysis
     steps:
     - uses: actions/checkout@v4
