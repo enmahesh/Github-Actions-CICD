@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -43,11 +43,9 @@ jobs:
         run: gitleaks detect source . -r gitleaks-report.json -f json
         
   test:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: Security-Checks
     
-
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -73,7 +71,7 @@ jobs:
     - name: Build Sonar Scanning
       run: mvn package
 
-     - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
