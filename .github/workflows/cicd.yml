@@ -59,7 +59,7 @@ jobs:
     - name: Unit Test Cases
       run: mvn test
 
-  SonarQubeAnalysis:
+  sonarQubeAnalysis:
     runs-on: ubuntu-latest
 
     steps:
