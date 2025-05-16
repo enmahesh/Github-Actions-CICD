@@ -131,7 +131,8 @@ jobs:
       with:
         context: .
         push: true
-        tags: enmahesh/bank- app:latest
+        tags: enmahesh/bankapp:latest
         file: ./Dockerfile
+        platforms: linux/amd64,linux/arm64
     
  
