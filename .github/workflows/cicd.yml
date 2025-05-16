@@ -54,7 +54,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Unit Test Cases
-    - run: mvn test
+      run: mvn test
 
    # SonarQubeAnalysis:
    #  runs-on: self-hosted
